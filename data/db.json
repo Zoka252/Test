@@ -1,0 +1,8 @@
+{
+    "list": [ 
+        { "title":"Domaci","task":"Uraditi domaci","date":"2023","id": 1},
+        { "title":"Sisanje","task":"Osisati se","date":"2024","id": 2},
+        { "title":"Rodjendan","task":"Kupiti poklon","date":"2023","id": 3}
+    ]
+    
+}
