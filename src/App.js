@@ -2,36 +2,30 @@ import './App.css';
 import Todolist from './Todolist';
 import Navbar from './Navbar';
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom'
-
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Add from './Add';
+import Remove from './Remove';
 
 function App() {
+    return (
+        <Router>
+            <div className="app">
+                <Navbar></Navbar>
+                <div className="content">
+                    <Routes>
+                        <Route path="/" element={<Todolist />} />
+                        <Route path="/add" element={<Add />} />
+                        <Route path="/remove" element={<Remove />} />
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<Root />}>
-
-      </Route>
-    )
-  )
-
-  return (
-    <Router>
-      <div className="app">
-        <Navbar></Navbar>
-        <div className="content">
-            <Route exact path="/">
-              <Todolist></Todolist>
-            </Route>
-          
-        </div>
-      </div>
-    </Router>
-  );
+                    </Routes>
+                </div>
+            </div>
+        </Router>
+    );
 }
 
-const Root = () -> {
-  return <></>
+const Root = () => {
+    return <></>
 }
 
 export default App;

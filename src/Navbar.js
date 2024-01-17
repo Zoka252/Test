@@ -4,10 +4,11 @@ import "./navbar.css"
 const Navbar = () => {
     return ( 
         <div className="navbar">
-            <h1>ToDoList</h1>
+            <Link to="/" className='logo'><h1>ToDoList</h1></Link>
+            
             <div className="buttons">
-                <Link to="/"><button>Create New Task</button></Link>
-                <Link to="/add"><button>Delete Task</button></Link>
+                <Link to="/add"><button>Create New Task</button></Link>
+                <Link to="/remove"><button>Delete Task</button></Link>
             </div>
             
         </div>
